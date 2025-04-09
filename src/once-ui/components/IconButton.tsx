@@ -84,6 +84,7 @@ const IconButton = forwardRef<HTMLButtonElement, IconButtonProps | AnchorProps>(
       <ElementType
         id={id}
         href={href}
+        target="_blank"
         ref={ref}
         className={classNames(
           buttonStyles.button,

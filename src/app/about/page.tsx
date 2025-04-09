@@ -14,7 +14,15 @@ import {
 import { baseURL } from "@/app/resources";
 import TableOfContents from "@/components/about/TableOfContents";
 import styles from "@/components/about/about.module.scss";
-import { person, about, social, projects } from "@/app/resources/content";
+import {
+  person,
+  about,
+  social,
+  projects,
+  resume,
+} from "@/app/resources/content";
+import { FaDownload } from "react-icons/fa6";
+import Link from "next/link";
 
 export async function generateMetadata() {
   const title = about.title;
@@ -139,35 +147,33 @@ export default function About() {
             vertical="center"
             marginBottom="32"
           >
-            {about.calendar.display && (
-              <Flex
-                fitWidth
-                border="brand-alpha-medium"
-                className={styles.blockAlign}
-                style={{
-                  backdropFilter: "blur(var(--static-space-1))",
-                }}
-                background="brand-alpha-weak"
-                radius="full"
-                padding="4"
-                gap="8"
-                marginBottom="m"
-                vertical="center"
+            {resume.display && (
+              <Link
+                target="_blank"
+                href={resume.link}
+                style={{ padding: "10px 10px", color:"white" }}
+                passHref
               >
-                <Icon
-                  paddingLeft="12"
-                  name="calendar"
-                  onBackground="brand-weak"
-                />
-                <Flex paddingX="8">Schedule a call</Flex>
-                <IconButton
-                  href={about.calendar.link}
-                  data-border="rounded"
-                  variant="secondary"
-                  icon="chevronRight"
-                />
-              </Flex>
+                <Flex
+                  fitWidth
+                  border="brand-alpha-medium"
+                  className={styles.blockAlign}
+                  style={{
+                    backdropFilter: "blur(var(--static-space-1))",
+                  }}
+                  background="brand-alpha-weak"
+                  radius="full"
+                  padding="12"
+                  gap="8"
+                  marginBottom="m"
+                  vertical="center"
+                >
+                  <FaDownload />
+                  <Flex paddingX="8">Download Resume</Flex>
+                </Flex>
+              </Link>
             )}
+
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
             </Heading>
@@ -364,6 +370,36 @@ export default function About() {
                 ))}
               </Column>
             </>
+          )}
+
+          {about.calendar.display && (
+            <Flex
+              fitWidth
+              border="brand-alpha-medium"
+              className={styles.blockAlign}
+              style={{
+                backdropFilter: "blur(var(--static-space-1))",
+              }}
+              background="brand-alpha-weak"
+              radius="full"
+              padding="4"
+              gap="8"
+              marginBottom="m"
+              vertical="center"
+            >
+              <Icon
+                paddingLeft="12"
+                name="calendar"
+                onBackground="brand-weak"
+              />
+              <Flex paddingX="8">Schedule a call</Flex>
+              <IconButton
+                href={about.calendar.link}
+                data-border="rounded"
+                variant="secondary"
+                icon="chevronRight"
+              />
+            </Flex>
           )}
 
           {about.technical.display && (
