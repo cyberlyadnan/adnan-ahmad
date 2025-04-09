@@ -1,11 +1,11 @@
-const baseURL = "demo.magic-portfolio.com";
+const baseURL = "https://adnan-ahmad.vercel.app/";
 
 const routes = {
   "/": true,
   "/about": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/projects": true,
 };
 
 // Enable password protection on selected routes

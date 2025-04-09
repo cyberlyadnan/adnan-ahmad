@@ -72,7 +72,7 @@ const about = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com", // Replace with personal calendar link if any
+    link: "tel:9756896250", // Replace with personal calendar link if any
   },
   intro: {
     display: true,
@@ -89,39 +89,108 @@ const about = {
     label:"Work",
     display: true,
     title: "Work Experience",
-    experiences: [
+    experiences :[
       {
         company: "Zeptik",
-        timeframe: "2024 - Present",
         role: "Frontend Engineer Intern",
+        timeframe: "Feb 2024 – Feb 2025",
+        location: "Lucknow, India",
+        project: "Second-Hand Goods Platform (OLX Clone)",
+        description:
+          "A dynamic full-stack platform enabling users to buy and sell second-hand products, available both as a web and mobile application.",
         achievements: [
-          <>
-            Developed a second-hand goods platform with Next.js and React Native.
-          </>,
-          <>
-            Implemented secure WebView communication using authentication tokens.
-          </>,
-          <>
-            Used Docker and Kubernetes for app deployment and containerization.
-          </>,
+          "Built the web platform using Next.js, Tailwind CSS, and integrated it with a React Native mobile app.",
+          "Ensured secure communication between WebView and React Native app using authentication tokens.",
+          "Used Docker for containerization and deployed via Kubernetes for scalability.",
+          "Enhanced project agility using Jira and Notion for team collaboration and task tracking.",
+          "Enabled secure testing environments via Ngrok tunneling during development."
         ],
-        images: [],
+        techStack: [
+          "Next.js",
+          "Tailwind CSS",
+          "React Native",
+          "Firebase",
+          "Docker",
+          "Kubernetes",
+          "Ngrok",
+          "Jira",
+          "Notion"
+        ],
+        images: []
       },
       {
-        company: "Heritage Global",
-        timeframe: "2023 - Present",
-        role: "Founder & Developer",
+        company: "Credible Academy",
+        role: "Frontend Trainer",
+        timeframe: "Jun 2023 – Sep 2023",
+        location: "Saharanpur, India",
+        project: "Frontend Development Bootcamp",
+        description:
+          "Designed and led a professional course in frontend web development, focusing on both fundamentals and real-world skills.",
         achievements: [
-          <>
-            Built and deployed the company website using Next.js.
-          </>,
-          <>
-            Implemented SEO optimization and metadata strategies to improve ranking.
-          </>,
+          "Created a full curriculum on HTML, CSS, JavaScript, and React, improving student project completion rates by 30%.",
+          "Built interactive coding challenges and hands-on projects to drive engagement.",
+          "Conducted live webinars and workshops with 200+ attendees, improving the academy’s reputation."
         ],
-        images: [],
+        techStack: ["HTML", "CSS", "JavaScript", "React", "Teaching", "Mentorship"],
+        images: []
       },
-    ],
+      {
+        company: "Institute of Skills and Rural Development",
+        role: "IT Trainer",
+        timeframe: "Sep 2021 – Sep 2022",
+        location: "Saharanpur, India",
+        project: "Multi-Tech Training Program",
+        description:
+          "Provided foundational and advanced computer education to rural students across various domains.",
+        achievements: [
+          "Delivered courses in MS Office, HTML/CSS, Photoshop, Networking, and Security.",
+          "Applied case studies and real-life simulations to boost understanding.",
+          "Mentored 100+ students with project support, leading to a significant rise in exam success rates."
+        ],
+        techStack: [
+          "MS Office",
+          "HTML",
+          "CSS",
+          "Photoshop",
+          "CorelDraw",
+          "Networking",
+          "Security"
+        ],
+        images: []
+      },
+      {
+        company: "Wealth Clinic",
+        role: "Business Development Executive",
+        timeframe: "Mar 2023 – May 2023",
+        location: "Noida, India",
+        project: "Business Growth Strategy",
+        description:
+          "Developed actionable strategies to expand client reach and streamline operations.",
+        achievements: [
+          "Optimized client interaction strategies, increasing acquisition/retention by 20%.",
+          "Performed deep market and competitor analysis, helping target new niches.",
+          "Collaborated with cross-functional teams to streamline client communication pipelines."
+        ],
+        techStack: ["Business Development", "Market Research", "Client Relations"],
+        images: []
+      },
+      {
+        company: "Self-Employed",
+        role: "Freelance Educator & Developer",
+        timeframe: "2020 – Present",
+        location: "Remote",
+        project: "Full-Stack Training & Mentorship",
+        description:
+          "Taught aspiring developers and non-tech professionals essential programming skills.",
+        achievements: [
+          "Created full-stack modules (HTML, CSS, JS, DBMS, etc.) tailored for hands-on learning.",
+          "Facilitated practical projects, coding challenges, and real-world scenarios to ensure skill retention.",
+          "Earned positive feedback from students for boosting their confidence and job readiness."
+        ],
+        techStack: ["HTML", "CSS", "JavaScript", "DBMS", "Training", "Mentorship"],
+        images: []
+      }
+    ],    
   },
   studies: {
     display: true,
@@ -335,11 +404,11 @@ const work = {
 };
 
 
-const gallery = {
-  label: "Gallery",
-  title: "My photo gallery",
-  description: `A photo collection by ${person.name}`,
-  // Images from https://pexels.com
+const projects = {
+  label: "Projects",
+  title: "Explore My Projects",
+  description: `Frontend projects by ${person.name}`,
+
   images: [
     {
       src: "/images/gallery/img-01.jpg",
@@ -414,4 +483,4 @@ const gallery = {
   ],
 };
 
-export { person, social, newsletter, home, about, blog, work, gallery };
+export { person, social, newsletter, home, about, blog, work, projects };
