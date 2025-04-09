@@ -262,7 +262,7 @@ const about = {
             height: 5,
           },
           {
-            src: "/images/skills/css.png",
+            src: "/images/skills/css.jpg",
             alt: "CSS logo",
             width: 5,
             height: 5,

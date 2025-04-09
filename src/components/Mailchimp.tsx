@@ -32,6 +32,37 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
     return emailPattern.test(email);
   };
 
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setTouched(true);
+  
+    if (!validateEmail(email)) {
+      setError("Please enter a valid email address.");
+      return;
+    }
+  
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+  
+      const data = await res.json();
+  
+      if (!res.ok) throw new Error(data.error);
+  
+      alert("✅ Subscribed successfully!");
+      setEmail("");
+      setError("");
+    } catch (err) {
+      console.error(err);
+      setError("Subscription failed. Please try again.");
+    }
+  };
+  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setEmail(value);
@@ -132,8 +163,7 @@ export const Mailchimp = ({ newsletter }: { newsletter: NewsletterProps }) => {
           display: "flex",
           justifyContent: "center",
         }}
-        action={mailchimp.action}
-        method="post"
+        onSubmit={handleSubmit} // 🔥 new submission handler
         id="mc-embedded-subscribe-form"
         name="mc-embedded-subscribe-form"
       >

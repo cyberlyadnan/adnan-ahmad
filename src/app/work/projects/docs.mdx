@@ -1,7 +1,7 @@
 ---
-title: "The Seerah Library – A Digital Platform for Exploring the Life of the Prophet ﷺ"
-publishedAt: "2025-04-08"
-summary: "Built a feature-rich, SEO-optimized web app to explore Seerah books using modern frontend technologies, Firebase backend, and AI-powered features for deeper engagement with Islamic literature."
+title: "Docs – Interactive Note-Taking App Inspired by Google Keep"
+publishedAt: "2025-04-09"
+summary: "A sleek and interactive note-taking application built with React, TailwindCSS, and Framer Motion. Offers localStorage-based persistence and draggable UI like a dynamic screensaver."
 images:
   - "/images/projects/docs-1.png"
   - "/images/projects/docs-2.png"
@@ -10,39 +10,36 @@ team:
     role: "Frontend Software Engineer"
     avatar: "/images/avatar.jpg"
     linkedIn: "https://www.linkedin.com/in/adnanahmad9334/"
-link: "https://the-seerah-library.vercel.app/"
+link: "https://docs-429cd.web.app"
 ---
 
 ## Overview
 
-**The Seerah Library** is a digital platform designed to help users discover, read, and reflect on the life of Prophet Muhammad ﷺ through a curated collection of books. The platform features detailed metadata, AI-powered exploration tools, and a clean, responsive user interface. The goal was to create a scalable, SEO-friendly, and user-centric web experience that bridges traditional Islamic scholarship with modern technology.
+**Docs** is a modern, lightweight note-taking app inspired by Google Keep. It features a beautifully animated UI powered by **Framer Motion** and uses **localStorage** for offline data persistence. Designed for quick note capturing and playful interaction, each note acts like a draggable "bubble" on your screen.
 
 ## Key Features
 
-- **Book Metadata Management**: Structured each book with comprehensive metadata including author details, language, genre, ratings, tags, and publication dates using Firebase Firestore.
-- **Server-Side Rendering for SEO**: Implemented SSR in Next.js to load content directly from Firestore for better indexing and performance.
-- **Pagination and Explore Grid**: Designed a dynamic explore page that initially loads 6 books with pagination-ready architecture for scalability.
-- **AI-Powered Book Chat (Planned)**: Integrated plans for AI-based chat interface to ask questions and get answers based on book content.
-- **Author Profiles**: Linked each book with an author profile, allowing users to discover other works by the same author and understand the scholarly background.
-- **Authentication**: Integrated secure login with Firebase Authentication for bookmarking, reviewing, and personal interaction with the content.
+- 📝 **Quick Note-Taking**: Users can instantly add, edit, and remove notes.
+- 🪄 **Draggable Notes**: Notes can be freely dragged around the screen using **Framer Motion**, creating a screensaver-like experience.
+- 💾 **Local Storage Persistence**: All notes are stored in the browser, allowing offline access with no backend required.
+- 🧼 **Minimalist UI**: A clean, distraction-free interface built with **TailwindCSS** for fast load times and full responsiveness.
+- 💻 **Open Source**: Freely available on GitHub for forking, customization, and extension.
 
 ## Technologies Used
 
-- **Next.js 14 (App Router)**: For server-side rendering and dynamic routing.
-- **TailwindCSS**: For fast, utility-first UI development.
-- **Firebase (Firestore & Auth)**: For backend data storage, authentication, and real-time updates.
-- **TypeScript**: For robust type safety across components and APIs.
-- **Shadcn/UI & Lucide Icons**: For polished UI components and iconography.
-- **Vercel**: For deployment and edge performance.
+- **React.js** – For building UI components and managing state
+- **TailwindCSS** – For fast and responsive styling
+- **Framer Motion** – For animations and draggable interactions
+- **localStorage API** – For offline data persistence
 
 ## Challenges and Learnings
 
-One of the core challenges was building a flexible yet scalable data structure in Firestore for books, authors, and reviews. Ensuring strong typing with `SeerahBook` interfaces helped catch issues early. Another key learning was balancing dynamic UI with server-rendered SEO benefits—especially when fetching and displaying paginated book data.
+Creating a natural and fluid drag experience with **Framer Motion** required tuning interaction props like `dragElastic` and `layoutTransition`. I also focused on keeping the app fully accessible and mobile-optimized while using only the browser’s local storage.
 
 ## Outcome
 
-The Seerah Library serves as a modern gateway to learning about the Seerah through a beautiful, performant, and accessible platform. It has laid the foundation for deeper features such as AI chatbots, review systems, and donation-based book sponsorship. This project reflects a strong blend of frontend engineering, backend integration, and Islamic values in tech.
+**Docs** is more than a simple note app—it’s a delightful, interactive experience that showcases animation, local persistence, and design thinking. It demonstrates my capability to build engaging, offline-capable apps that feel alive and intuitive.
 
 ---
 
-This project showcases your ability to build full-stack, user-focused applications that blend content, technology, and purpose. It's perfect for your portfolio or to present to companies focused on EdTech, FaithTech, or content platforms.
+> This project is a perfect addition to a frontend portfolio, highlighting creativity, UI polish, and performance-focused development practices.
