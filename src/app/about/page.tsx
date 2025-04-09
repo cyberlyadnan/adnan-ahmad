@@ -137,21 +137,11 @@ export default function About() {
                 ))}
               </Flex>
             )}
-          </Column>
-        )}
-        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
-          <Column
-            id={about.intro.title}
-            fillWidth
-            minHeight="160"
-            vertical="center"
-            marginBottom="32"
-          >
             {resume.display && (
               <Link
                 target="_blank"
                 href={resume.link}
-                style={{ padding: "10px 10px", color:"white" }}
+                style={{ padding: "10px 10px", color:"white",margin:'2px auto'}}
                 passHref
               >
                 <Flex
@@ -173,6 +163,17 @@ export default function About() {
                 </Flex>
               </Link>
             )}
+          </Column>
+        )}
+        <Column className={styles.blockAlign} flex={9} maxWidth={40}>
+          <Column
+            id={about.intro.title}
+            fillWidth
+            minHeight="160"
+            vertical="center"
+            marginBottom="32"
+          >
+            
 
             <Heading className={styles.textAlign} variant="display-strong-xl">
               {person.name}
