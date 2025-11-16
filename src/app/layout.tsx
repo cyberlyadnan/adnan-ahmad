@@ -13,6 +13,8 @@ import { person, home } from "@/app/resources/content";
 import { Background, Column, Flex, ToastProvider } from "@/once-ui/components";
 
 export async function generateMetadata() {
+  const avatarImage = `https://${baseURL}${person.avatar}`;
+  
   return {
     metadataBase: new URL(`https://${baseURL}`),
     title: home.title,
@@ -24,6 +26,20 @@ export async function generateMetadata() {
       siteName: `${person.firstName}'s Portfolio`,
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: avatarImage,
+          width: 1200,
+          height: 1200,
+          alt: `${person.name} - ${person.role}`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${person.firstName}'s Portfolio`,
+      description: "Portfolio website showcasing my work.",
+      images: [avatarImage],
     },
     robots: {
       index: true,

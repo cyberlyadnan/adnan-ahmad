@@ -29,7 +29,7 @@ import Link from "next/link";
 export async function generateMetadata() {
   const title = home.title;
   const description = home.description;
-  const ogImage = `https://${baseURL}/og?title=${encodeURIComponent(title)}`;
+  const avatarImage = `https://${baseURL}${person.avatar}`;
 
   return {
     title,
@@ -41,8 +41,10 @@ export async function generateMetadata() {
       url: `https://${baseURL}`,
       images: [
         {
-          url: ogImage,
-          alt: title,
+          url: avatarImage,
+          width: 1200,
+          height: 1200,
+          alt: `${person.name} - ${person.role}`,
         },
       ],
     },
@@ -50,7 +52,7 @@ export async function generateMetadata() {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [avatarImage],
     },
   };
 }
