@@ -1,89 +1,118 @@
-# **Build your portfolio with Once UI's Magic Portfolio**
+# Adnan Ahmad - Portfolio Website
 
-View the [demo here](https://demo.magic-portfolio.com).
+A modern, responsive portfolio website showcasing my work as a Frontend Software Engineer. Built with Next.js, React, and TypeScript.
 
-![Magic Portfolio](public/images/cover.png)
+![Portfolio Cover](public/images/cover.png)
 
+## About
 
-# **Getting started**
+This is my personal portfolio website where I showcase my projects, blog posts, and professional experience. The site features a clean, minimalist design optimized for performance and accessibility.
 
-Magic Portfolio was built with [Once UI](https://once-ui.com) for [Next.js](https://nextjs.org). It requires Node.js v18.17+.
+## Tech Stack
 
-**1. Clone the repository**
+- **Framework**: Next.js 14 (App Router)
+- **UI Library**: React 18
+- **Language**: TypeScript
+- **Styling**: SCSS Modules, Tailwind CSS
+- **Content**: MDX for blog posts and project descriptions
+- **Deployment**: Vercel-ready
+
+## Features
+
+- **Responsive Design**: Optimized for all screen sizes and devices
+- **SEO Optimized**: Automatic metadata, Open Graph, and sitemap generation
+- **Blog System**: MDX-based blog with syntax highlighting
+- **Project Showcase**: Detailed project pages with images and descriptions
+- **About Page**: Professional background, work experience, and technical skills
+- **Gallery**: Visual showcase of work samples
+- **Newsletter Integration**: Mailchimp subscription functionality
+- **Password Protection**: Route guards for protected content
+- **Performance**: Server-side rendering and optimized images
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js v18.17 or higher
+- npm or yarn package manager
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd adnan-ahmad
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Configuration
+
+Edit the configuration files to customize the portfolio:
+
+- **Personal Information**: `src/app/resources/content.js`
+- **Site Configuration**: `src/app/resources/config.js`
+
+### Adding Content
+
+- **Blog Posts**: Add `.mdx` files to `src/app/blog/posts/`
+- **Projects**: Add `.mdx` files to `src/app/work/projects/`
+- **Images**: Place images in `public/images/`
+
+## Project Structure
+
 ```
-git clone https://github.com/once-ui-system/magic-portfolio.git
+├── src/
+│   ├── app/              # Next.js app router pages
+│   │   ├── about/        # About page
+│   │   ├── blog/         # Blog listing and posts
+│   │   ├── work/         # Projects listing and details
+│   │   └── resources/    # Configuration and content
+│   ├── components/       # React components
+│   └── once-ui/         # UI component library
+├── public/              # Static assets
+└── package.json
 ```
 
-**2. Install dependencies**
-```
-npm install
-```
+## Available Scripts
 
-**3. Run dev server**
-```
-npm run dev
-```
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-**4. Edit config**
-```
-src/app/resources/config
-```
+## Deployment
 
-**5. Edit content**
-```
-src/app/resources/content
-```
+The easiest way to deploy is using [Vercel](https://vercel.com):
 
-**6. Create blog posts / projects**
-```
-Add a new .mdx file to src/app/blog/posts or src/app/work/projects
-```
+1. Push your code to GitHub
+2. Import your repository on Vercel
+3. Deploy with one click
 
-# **Features**
+The site is optimized for Vercel's platform with automatic deployments on every push.
 
-## **Once UI**
-- All tokens, components & features of [Once UI](https://once-ui.com)
+## Contact
 
-## **SEO**
-- Automatic open-graph and X image generation with next/og
-- Automatic schema and metadata generation based on the content file
+- **Email**: cyberlyadnan@gmail.com
+- **LinkedIn**: [adnanahmad9334](https://www.linkedin.com/in/adnanahmad9334/)
+- **GitHub**: [cyberlyadnan](https://github.com/cyberlyadnan)
+- **X (Twitter)**: [@adnanahmad9334](https://x.com/adnanahmad9334)
 
-## **Design**
-- Responsive layout optimized for all screen sizes
-- Timeless design without heavy animations and motion
-- Endless customization options through [data attributes](https://once-ui.com/docs/theming)
+## License
 
-## **Content**
-- Render sections conditionally based on the content file
-- Enable or disable pages for blog, work, gallery and about / CV
-- Generate and display social links automatically
-- Set up password protection for URLs
+This project is open source and available under the [MIT License](LICENSE).
 
-## **Localization**
-- A localized version of Magic Portfolio is available with the next-intl library
-- To use localization, switch to the 'i18n' branch
+---
 
-# **Authors**
-
-Connect with us on Threads or LinkedIn.
-
-Lorant Toth: [Threads](https://www.threads.net/@lorant.one), [LinkedIn](https://www.linkedin.com/in/tothlorant/)  
-Zsofia Komaromi: [Threads](https://www.threads.net/@zsofia_kom), [LinkedIn](https://www.linkedin.com/in/zsofiakomaromi/)
-
-Localization added by [François Hernandez](https://github.com/francoishernandez)
-
-# **Get involved**
-
-- Join the [Design Engineers Club on Discord](https://discord.com/invite/5EyAQ4eNdS) and share your portfolio with us!
-- Report a [bug](https://github.com/once-ui-system/magic-portfolio/issues/new?labels=bug&template=bug_report.md).
-
-# **License**
-
-Distributed under the CC BY-NC 4.0 License.
-- Commercial usage is not allowed.
-- Attribution is required.
-
-See `LICENSE.txt` for more information.
-
-# **Deploy with Vercel**
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&project-name=portfolio&repository-name=portfolio&redirect-url=https%3A%2F%2Fgithub.com%2Fonce-ui-system%2Fmagic-portfolio&demo-title=Magic%20Portfolio&demo-description=Showcase%20your%20designers%20or%20developer%20portfolio&demo-url=https%3A%2F%2Fdemo.magic-portfolio.com&demo-image=%2F%2Fraw.githubusercontent.com%2Fonce-ui-system%2Fmagic-portfolio%2Fmain%2Fpublic%2Fimages%2Fcover.png)
+Built with ❤️ by Adnan Ahmad
