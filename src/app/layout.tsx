@@ -20,10 +20,10 @@ export async function generateMetadata() {
     title: home.title,
     description: home.description,
     openGraph: {
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
+      title: `${person.name} - ${person.role} | Full Stack Developer Portfolio`,
+      description: `Professional ${person.role} specializing in Next.js, React, Node.js, MongoDB, Firebase, and cloud architecture. Expert in building scalable web applications, mobile apps, and enterprise solutions.`,
       url: baseURL,
-      siteName: `${person.firstName}'s Portfolio`,
+      siteName: `${person.name} - ${person.role}`,
       locale: "en_US",
       type: "website",
       images: [
@@ -37,8 +37,8 @@ export async function generateMetadata() {
     },
     twitter: {
       card: "summary_large_image",
-      title: `${person.firstName}'s Portfolio`,
-      description: "Portfolio website showcasing my work.",
+      title: `${person.name} - ${person.role}`,
+      description: `Professional ${person.role} specializing in full-stack web development, mobile applications, and enterprise solutions. Available for freelance projects.`,
       images: [avatarImage],
     },
     robots: {
