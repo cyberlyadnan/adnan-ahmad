@@ -62,7 +62,7 @@ const home = {
 const resume = {
   label: "Resume",
   display: true,
-  link: "/resume/adnan-ahmad-full-stack-engineer.pdf",
+  link: "/resume/adnan-ahmad-frontend-engineer.pdf",
 };
 
 const about = {

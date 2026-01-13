@@ -138,11 +138,11 @@ export default function About() {
               </Flex>
             )}
             {resume.display && (
-              <Link
-                target="_blank"
+              <a
                 href={resume.link}
-                style={{ padding: "10px 10px", color:"white",margin:'2px auto'}}
-                passHref
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ textDecoration: "none", padding: "10px 10px", color:"white",margin:'2px auto'}}
               >
                 <Flex
                   fitWidth
@@ -161,7 +161,7 @@ export default function About() {
                   <FaDownload />
                   <Flex paddingX="8">Download Resume</Flex>
                 </Flex>
-              </Link>
+              </a>
             )}
           </Column>
         )}

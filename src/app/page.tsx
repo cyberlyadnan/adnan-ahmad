@@ -133,11 +133,11 @@ export default function Home() {
         </Column>
       </Column>
       {resume.display && (
-        <Link
-          target="_blank"
+        <a
           href={resume.link}
-          style={{ padding: "10px 10px", color: "white" }}
-          passHref
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", padding: "10px 10px", color: "white" }}
         >
           <Flex
             fitWidth
@@ -156,7 +156,7 @@ export default function Home() {
             <FaDownload />
             <Flex paddingX="8">Download Resume</Flex>
           </Flex>
-        </Link>
+        </a>
       )}
       <RevealFx translateY="16" delay={0.6}>
         <Projects range={[2, 3]} />
